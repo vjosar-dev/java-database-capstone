@@ -1,5 +1,12 @@
 package com.project.back_end.models;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"doctor_id", "appointment_time"}))
 public class Appointment {
